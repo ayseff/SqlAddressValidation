@@ -20,7 +20,6 @@ BEGIN
 
 		DECLARE @usps xml = dbo.GetValidatedAddress('', '', @Address1, /* @Address2, */ @City, @StateProvince, @Zip, '')
 
-	--@usp
 		INSERT INTO dbo.[Addresses]
 		(
 			Address1,

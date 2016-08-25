@@ -82,19 +82,13 @@ namespace ClrLibrary
             throw new NotImplementedException();
         }
 
-        /// <summary>
-        /// http://www.hanselman.com/blog/HTTPPOSTsAndHTTPGETsWithWebClientAndCAndFakingAPostBack.aspx
-        /// </summary>
-        /// <param name="URI"></param>
-        /// <returns></returns>
+
         public static string HttpGet(string URI)
         {
             //    var client = new WebClient();
             //    var ret = client.DownloadString(URI);
 
             var req = WebRequest.Create(URI);
-            //req.Proxy = new WebProxy("", true);
-            //req.Proxy = new System.Net.WebProxy(ProxyString, true); //true means no proxy
             var resp = req.GetResponse();
             // ReSharper disable once AssignNullToNotNullAttribute
             var sr = new StreamReader(resp.GetResponseStream());

@@ -10,7 +10,6 @@ GO
 ALTER DATABASE AddressDB SET TRUSTWORTHY ON
 GO
 
-
 IF EXISTS ( SELECT 1
    FROM  sys.assemblies asms
    WHERE asms.name = N'ClrLibrary' )
@@ -28,7 +27,7 @@ WITH PERMISSION_SET = UNSAFE
 GO
 
 CREATE FUNCTION	dbo.GetValidatedAddress(@FirmName NVARCHAR(max), @Address1 NVARCHAR(max), @Address2 NVARCHAR(max), @City NVARCHAR(max),@State NVARCHAR(max), @Zip5 NVARCHAR(max), @Zip4 NVARCHAR(max))
-returns xml --NVARCHAR(max)
+RETURNS [XML] --NVARCHAR(max)
 	WITH EXECUTE AS CALLER
 AS EXTERNAL NAME ClrLibrary.[ClrLibrary.UserDefinedFunctions].GetValidatedAddress;
 GO

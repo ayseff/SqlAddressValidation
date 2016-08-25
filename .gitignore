@@ -7,3 +7,5 @@
 /ClrLibrary/ClrLibrary/bin/Debug
 /ClrLibrary/ClrLibrary/obj/Debug
 *.suo
+/ClrLibrary/ClrLibrary/ClrLibrary.sqlproj.user
+/ClrLibrary/ClrLibrary/ClrLibrary.dbmdl
