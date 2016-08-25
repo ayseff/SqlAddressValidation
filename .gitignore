@@ -3,3 +3,7 @@
 ################################################################################
 
 /ClrLibrary/.localhistory
+/ClrLibrary/.vs
+/ClrLibrary/ClrLibrary/bin/Debug
+/ClrLibrary/ClrLibrary/obj/Debug
+*.suo
